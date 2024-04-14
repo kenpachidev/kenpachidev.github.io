@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');     /* retirado do Google Fonts serve como indicador da fonte desejada para o site */
+
+*{
+    box-sizing: border-box;     /* orientação em "caixas" */
+}
+
+body{
+    padding: 0;     /* código fazendo referência ao preenchimento da caixa do corpo */
+    margin: 0;      /* margem (contorno */
+    font-family: 'Poppins', sans-serif;     /* aqui se define qual fonte será utilizada em todo o campo do body */
+}
+
+header{
+    display: flex;      /* flexibilização da box */
+    justify-content: center;        /* centralizando */
+    align-items: center;        /* centralizando tendo como base os objetos */
+    background: #a4c97f;        /* cor de fundo do cabeçalho */
+    height: 80px;       /* altura do campo preenchido */
+}
+
+header h1{
+    font-size: 50px;        /* tamanho da fonte (em pixel) */
+    font-weight: normal;    /* definindo a largura da fonte (normal, negrito, etc) */
+    color: white;       /* cor da fonte */
+}
+
+.hero{
+    display: flex;      /* flexibilização da box */
+    justify-content: center;    /* centralizando */
+    align-items: center;    /* centralizando tendo como base os objetos */
+    width: 100%;        /* largura em porcentagem */
+    /* border: 1px solid red;      definindo cor e largura da borda */
+}
+
+.box-img{
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    /* border: 1px solid blue; */
+}
+
+.responsiva{
+    max-width: 100%;
+}
+
+.box-txt{
+    display: flex;      /* flexibilização da box */
+    flex-flow: row wrap;    /* esse código serve para fazer o corpo do texto ser dividido em linhas individuais (horizontalmente) */
+    width: 35%;         /* largura em porcentagem */
+    /* border: 1px solid green;    definindo cor e largura da borda */
+}
+
+.box-txt span{
+    text-transform: uppercase;      /* transformar todo o texto em caixa alta */
+    color: gray;
+    display: block;
+    letter-spacing: 5px;        /* espaçamento entre as letras */
+}
+
+.box-txt h2{
+    font-size: 75px;        /* tamanho da fonte */
+    color: #a4c97f;       /* cor do texto h2 */
+    margin-top: 30px;       /* afastamento do topo */
+    margin-bottom: 30px;    /* afastamento da parte de baixo */
+    line-height: 70px;      /* distância entre uma linha e outra */
+}
+
+.box-txt p{
+    color: gray;        /* cor do texto do primeiro parágrafo */
+    margin-bottom: 30px;
+}
+
+.btn-hero{
+    background-color: #a4c97f;      /* cor de fundo do botão */
+    padding: 13px 22px;         /* espaçamento horizontal e vertical do botão */
+    text-decoration: none;      /* retirar o underline que caracteriza um link */
+    font-size: 17px;
+    color: white;
+    border-radius: 5px;         /* arredondar os vértices das arestas do retângulo */
+    transition: 0.5s all;       /* tempo de efeito de transição quando o mouse é passado por cima do botão */
+    margin-bottom: 30px;        /* afastamento da parte de baixo */
+}
+
+.btn-hero:hover{
+    background-color: #5e8a32;
+    font-size: 20px;
+}
+
+.container{
+    width: 80%; /* Garante que a largura ocupe toda a largura da página */
+    margin-left: 10%;
+    flex-flow: row wrap;
+    display: flex;      /* flexibilização da box */
+    justify-content: center;    /* centralizando as boxes no centro da página*/
+    /* border: 1px solid red;     definindo cor e largura da borda */
+}
+
+.box-item{
+    display: inline-block;      /* permite os blocos ficarem lado a lado */
+    align-items: center;
+    text-align: center;
+    width: 30%;
+    height: 380px;
+    background: #a4c97f;
+    color: white;
+    margin: 4px;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+.m-top{
+    margin-top: 20px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a4c97f;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    height: 70px;
+    margin-top: 200px;
+}
+
+.whats{
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+}
+
+@media screen and (max-width: 1200px){      /* código para fazer alterações no front-end do site de acordo com o dispositivo sendo utilizado */
+        header h1{
+            font-size: 22px;
+        }
+
+        .hero{
+            flex-direction: column-reverse;
+        }
+        .box-txt{
+            flex-flow: column wrap;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 30px;
+        }
+
+        .box-txt h2{
+            font-size: 55px;
+        }
+
+        .box-txt p{
+            text-align: center;
+        }
+
+        .box-img{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .box-item{
+            width: 95%;
+        }
+
+        footer{
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .whats img{
+            width: 70px;
+        }
+    }
